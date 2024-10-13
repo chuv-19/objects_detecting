@@ -1,48 +1,6 @@
-# import argparse
-# import os
-# from PIL import Image
-# import cv2
-# import torch
-# from torchvision import transforms
-# from ultralytics import YOLO
-
-
-# def main():
-#     try:
-#         parser = argparse.ArgumentParser(description='Загрузка файла и обработка нейросетью')
-#         parser.add_argument('input_file', help='Путь к файлу изображения или видео')
-#         parser.add_argument('-t', '--type', choices=['image', 'video'], default='image',
-#                     help='Тип файла (image - изображение, video - видео)')
-#         args = parser.parse_args()
-
-#         input_file = args.input_file
-#         file_type = args.type
-#     except:
-#         print("Неверный формат/не загружен")
-#         return None
-
-#     # проверка существования файла
-#     if not os.path.isfile(input_file):
-#         print(f'Файл не найден: {input_file}')
-#         exit(1)
-
-#     # обработка файла
-#     model = YOLO("/Users/sexyboy/Desktop/Hackathon/bpla/bpla/best.pt")
-#     res = model(input_file, save=True)
-#     if file_type == "image":
-#         print(res)
-  
-
-# if __name__ == '__main__':
-#   main()
-
 import argparse
 import os
 import json
-from PIL import Image
-import cv2
-import torch
-from torchvision import transforms
 from ultralytics import YOLO
 
 def main():
